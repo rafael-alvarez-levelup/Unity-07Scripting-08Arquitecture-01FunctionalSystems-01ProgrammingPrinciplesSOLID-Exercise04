@@ -16,11 +16,11 @@ public class DealDamageOnTriggerEnterController : MonoBehaviour
     {
         if (Utilities.ContainsLayer(triggerMask, other.gameObject.layer))
         {
-            HealthBehaviour healthBehaviour = other.GetComponent<HealthBehaviour>();
+            IDamageable target = other.GetComponent<IDamageable>();
 
-            if (healthBehaviour != null)
+            if (target != null)
             {
-                dealDamageBehaviour.DealDamage(healthBehaviour);
+                dealDamageBehaviour.DealDamage(target);
             }
         }
     }

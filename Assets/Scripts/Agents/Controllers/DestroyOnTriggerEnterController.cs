@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+// TODO: Recycle OnTriggerEnterController logic.
+
 [RequireComponent(typeof(DestroyBehaviour))]
 public class DestroyOnTriggerEnterController : MonoBehaviour
 {
