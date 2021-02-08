@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-// TODO: Recycle OnTriggerEnterController logic.
+// TODO: OnTriggerEnter event handler (game object parameter).
+// Subscribe to that event and destroy / deal damage / heal?
 
 [RequireComponent(typeof(DestroyBehaviour))]
 public class DestroyOnTriggerEnterController : MonoBehaviour
