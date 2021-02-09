@@ -29,6 +29,7 @@ public class PlayerHealthBehaviour : HealthBehaviour, IHealable
 
     private void PlayerHealthChanged()
     {
+        // Could insert silent bugs. Use assertion?
         if (OnPlayerHealthChanged != null)
         {
             OnPlayerHealthChanged.Invoke(currentHealth, healthData.Health);

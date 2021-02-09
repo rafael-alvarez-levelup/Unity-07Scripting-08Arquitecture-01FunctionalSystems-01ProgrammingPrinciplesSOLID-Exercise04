@@ -21,6 +21,7 @@ public class EnemyHealthBehaviour : HealthBehaviour
 
     private void EnemyDeath()
     {
+        // Could insert silent bugs. Use assertion?
         if (OnEnemyDeath != null)
         {
             OnEnemyDeath();
