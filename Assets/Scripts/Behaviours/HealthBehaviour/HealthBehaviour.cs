@@ -33,7 +33,7 @@ public class HealthBehaviour : MonoBehaviour, IDamageable
         }
     }
 
-    private void Die()
+    protected virtual void Die()
     {
         spawnBehaviour.Spawn(explosionPrefab, transform.position, transform.rotation);
 
