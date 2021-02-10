@@ -181,7 +181,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 110440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0a07045bdd4cec4ab86804c1824b7f8, type: 3}
+  m_Script: {fileID: 11500000, guid: e1b5d8323dd31964e9e41eee9c147bcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6503570054819687955
@@ -275,8 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0054ce66e9a67240a12faef9c919abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 100000, guid: f4ec271e525e14ca9927a07e6a2e153d, type: 3}
   fireRate: 0.1
-  laserPrefab: {fileID: 7680658199015560036, guid: f4ec271e525e14ca9927a07e6a2e153d, type: 3}
 --- !u!114 &-2200377945843167457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,8 +289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982567868f8db1a4c80821be6e894878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 100000, guid: 902389847ec811f46b0ad63ab25b1856, type: 3}
   fireRate: 0.3
-  shellPrefab: {fileID: 4863738139137394719, guid: 902389847ec811f46b0ad63ab25b1856, type: 3}
   amount: 3
   angle: 90
 --- !u!114 &-2877696438876131530
@@ -305,8 +305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2173a7636fe3c2344a25748caeb3fab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 472527021832427138, guid: 211229c437456914b9b0a5911581bb77, type: 3}
   fireRate: 1
-  missilePrefab: {fileID: 1732871942783851870, guid: 211229c437456914b9b0a5911581bb77, type: 3}
 --- !u!1 &2243276429881723225
 GameObject:
   m_ObjectHideFlags: 0

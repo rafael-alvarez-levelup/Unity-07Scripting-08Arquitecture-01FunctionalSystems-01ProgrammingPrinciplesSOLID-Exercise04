@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-[RequireComponent(typeof(SpawnBehaviour), typeof(DestroyBehaviour))]
+[RequireComponent(typeof(SpawnGameObjectBehaviour), typeof(DestroyBehaviour))]
 public class HealthBehaviour : MonoBehaviour, IDamageable
 {
     [SerializeField] protected HealthData healthData;
@@ -9,13 +9,13 @@ public class HealthBehaviour : MonoBehaviour, IDamageable
     [SerializeField] private GameObject explosionPrefab;
 
     protected int currentHealth;
-    protected SpawnBehaviour spawnBehaviour;
+    protected SpawnGameObjectBehaviour spawnGameObjectBehaviour;
 
     private DestroyBehaviour destroyBehaviour;
 
     private void Awake()
     {
-        spawnBehaviour = GetComponent<SpawnBehaviour>();
+        spawnGameObjectBehaviour = GetComponent<SpawnGameObjectBehaviour>();
         destroyBehaviour = GetComponent<DestroyBehaviour>();
 
         currentHealth = healthData.Health;
@@ -25,7 +25,7 @@ public class HealthBehaviour : MonoBehaviour, IDamageable
     {
         currentHealth = Math.Max(0, currentHealth - amount);
 
-        spawnBehaviour.Spawn(damageEffectPrefab, transform.position, transform.rotation);
+        spawnGameObjectBehaviour.Spawn(damageEffectPrefab, transform.position, transform.rotation);
 
         if (currentHealth == 0)
         {
@@ -35,7 +35,7 @@ public class HealthBehaviour : MonoBehaviour, IDamageable
 
     protected virtual void Die()
     {
-        spawnBehaviour.Spawn(explosionPrefab, transform.position, transform.rotation);
+        spawnGameObjectBehaviour.Spawn(explosionPrefab, transform.position, transform.rotation);
 
         destroyBehaviour.Destroy();
     }

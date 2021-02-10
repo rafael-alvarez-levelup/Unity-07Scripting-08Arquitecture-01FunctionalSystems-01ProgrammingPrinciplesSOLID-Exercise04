@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Assertions;
 
 public class WeaponShell : WeaponBase
 {
-    [SerializeField] private ShellBehaviour shellPrefab;
     [SerializeField] private int amount = 3;
     [SerializeField] private float angle = 90f;
 
@@ -17,7 +17,12 @@ public class WeaponShell : WeaponBase
 
             Vector3 direction = firePoint.rotation * new Vector2(Mathf.Sin(radians), Mathf.Cos(radians));
 
-            ShellBehaviour shellBehaviour = Instantiate(shellPrefab, firePoint.position, Quaternion.Euler(direction));
+            GameObject shell = spawnGameObjectBehaviour.Spawn(prefab, firePoint.position, Quaternion.Euler(direction));
+
+            ShellBehaviour shellBehaviour = shell.GetComponent<ShellBehaviour>();
+
+            Assert.IsNotNull(shellBehaviour, $"{shell.gameObject.name} doesn't have ShellBehaviour component");
+
             shellBehaviour.AddVelocityChangeForce(direction.normalized);
         }
     }

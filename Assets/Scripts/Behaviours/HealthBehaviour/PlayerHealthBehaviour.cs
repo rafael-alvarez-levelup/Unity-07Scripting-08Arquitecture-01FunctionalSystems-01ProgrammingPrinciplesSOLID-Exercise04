@@ -21,7 +21,7 @@ public class PlayerHealthBehaviour : HealthBehaviour, IHealable
         {
             currentHealth = Math.Min(currentHealth + amount, healthData.Health);
 
-            spawnBehaviour.Spawn(healEffectPrefab, transform.position, transform.rotation);
+            spawnGameObjectBehaviour.Spawn(healEffectPrefab, transform.position, transform.rotation);
 
             PlayerHealthChanged();
         }

@@ -7,7 +7,7 @@ using UnityEngine;
 /// <summary>
 /// Manages the instantiation of enemies.
 /// </summary>
-[RequireComponent(typeof(SpawnBehaviour))]
+[RequireComponent(typeof(SpawnGameObjectBehaviour))]
 public class SpawnController : MonoBehaviour
 {
     #region Private Fields
@@ -16,7 +16,7 @@ public class SpawnController : MonoBehaviour
     [SerializeField] private List<Transform> spawnPoints = new List<Transform>();
     [SerializeField] private float delay;
 
-    private SpawnBehaviour spawnBehaviour;
+    private SpawnGameObjectBehaviour spawnGameObjectBehaviour;
 
     #endregion
 
@@ -24,7 +24,7 @@ public class SpawnController : MonoBehaviour
 
     private void Awake()
     {
-        spawnBehaviour = GetComponent<SpawnBehaviour>();
+        spawnGameObjectBehaviour = GetComponent<SpawnGameObjectBehaviour>();
     }
 
     private void Start()
@@ -48,7 +48,7 @@ public class SpawnController : MonoBehaviour
             {
                 Transform pointToSpawn = spawnPoints[Utilities.GetRandomIndex(0, spawnPoints.Count)];
 
-                spawnBehaviour.Spawn(member, pointToSpawn.position);
+                spawnGameObjectBehaviour.Spawn(member, pointToSpawn.position);
 
                 yield return memberDelay;
             }

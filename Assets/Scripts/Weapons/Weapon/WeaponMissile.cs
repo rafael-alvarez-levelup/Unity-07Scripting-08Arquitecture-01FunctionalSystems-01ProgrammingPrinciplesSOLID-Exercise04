@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.Assertions;
 
 public class WeaponMissile : WeaponBase
 {
-    [SerializeField] private MissileController missilePrefab;
-
     public override void Fire(Transform firePoint)
     {
-        MissileController missileController = Instantiate(missilePrefab, firePoint.position, firePoint.rotation);
+        GameObject missile = spawnGameObjectBehaviour.Spawn(prefab, firePoint.position, firePoint.rotation);
+
+        MissileController missileController = missile.GetComponent<MissileController>();
+
+        Assert.IsNotNull(missileController, $"{missile.gameObject.name} doesn't have MissileController component");
+
         missileController.SearchAndDestroy();
     }
 }
