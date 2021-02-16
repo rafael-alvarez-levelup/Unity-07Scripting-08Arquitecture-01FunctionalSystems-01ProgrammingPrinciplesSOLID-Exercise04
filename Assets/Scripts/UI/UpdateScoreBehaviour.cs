@@ -12,6 +12,6 @@ public class UpdateScoreBehaviour : MonoBehaviour
 
     public void UpdateScore(int score)
     {
-        scoreText.text = score.ToString();
+        scoreText.text = score.ToString("0000");
     }
 }

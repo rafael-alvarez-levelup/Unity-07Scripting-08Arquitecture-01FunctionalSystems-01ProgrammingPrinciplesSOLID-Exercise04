@@ -2,10 +2,10 @@
 
 public class AddScoreBehaviour : MonoBehaviour
 {
-    [SerializeField] private int amount;
+    [SerializeField] private int score;
 
-    public void AddScore()
+    public void AddScore(IScorable scorer)
     {
-        ScoreSingleton.Instance.AddScore(amount);
+        scorer.AddScore(score);
     }
 }

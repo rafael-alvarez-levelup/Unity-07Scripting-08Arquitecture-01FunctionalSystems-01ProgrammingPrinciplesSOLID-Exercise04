@@ -1,17 +1,13 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(UpdateScoreBehaviour))]
-public class ScoreSingleton : MonoBehaviour
+public class ScoreManager : MonoBehaviour, IScorable
 {
-    public static ScoreSingleton Instance { get; private set; }
-
     private UpdateScoreBehaviour updateScoreBehaviour;
     private int score;
 
     private void Awake()
     {
-        Instance = this;
-
         updateScoreBehaviour = GetComponent<UpdateScoreBehaviour>();
     }
 

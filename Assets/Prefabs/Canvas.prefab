@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 6566998895070601327}
   - component: {fileID: 7573570551814501049}
   - component: {fileID: 1799889473030579480}
-  - component: {fileID: 6706759150636027495}
+  - component: {fileID: 2611910332288104641}
   - component: {fileID: 5227968554922617378}
   m_Layer: 5
   m_Name: Score
@@ -473,7 +473,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 0000
---- !u!114 &6706759150636027495
+--- !u!114 &2611910332288104641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7621136962673142691}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ae9cea929a4d8c429d2afb29604e4be, type: 3}
+  m_Script: {fileID: 11500000, guid: a6ec7d1b9b7cd1a448298d069d350fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &5227968554922617378

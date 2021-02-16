@@ -4,10 +4,13 @@
 public class PlayerHealthChangedController : MonoBehaviour
 {
     private PlayerHealthBehaviour playerHealthBehaviour;
+    private LifebarManager lifebarManager;
 
     private void Awake()
     {
         playerHealthBehaviour = GetComponent<PlayerHealthBehaviour>();
+
+        lifebarManager = FindObjectOfType<LifebarManager>();
     }
 
     private void OnEnable()
@@ -22,6 +25,6 @@ public class PlayerHealthChangedController : MonoBehaviour
 
     private void PlayerHealthBehaviour_OnPlayerHealthChanged(int currentHealth, int maxHealth)
     {
-        LifebarSingleton.Instance.UpdateLifebar(currentHealth, maxHealth);
+        lifebarManager.UpdateLifebar(currentHealth, maxHealth);
     }
 }
